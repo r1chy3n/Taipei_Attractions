@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.PopupMenu
 import com.javahand.taipeiattractions.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,16 +30,6 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-//        binding.fab.setOnClickListener { view ->
-//            Snackbar.make(
-//                view,
-//                "Replace with your own action",
-//                Snackbar.LENGTH_LONG
-//            )
-//                .setAnchorView(R.id.fab)
-//                .setAction("Action", null).show()
-//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -52,10 +43,21 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_lang -> showPopupLang()
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun showPopupLang() = true.also {
+        PopupMenu(this, findViewById(R.id.action_lang)).run {
+            inflate(R.menu.popup_lang)
+            setOnMenuItemClickListener {
+
+                true
+            } // setOnMenuItemClickListener
+            show()
+        } // let
+    } // fun showPopupLang( MenuItem )
 
     override fun onSupportNavigateUp(): Boolean {
         val navController =
