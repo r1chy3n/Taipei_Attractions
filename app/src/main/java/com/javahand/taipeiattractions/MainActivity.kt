@@ -1,5 +1,7 @@
 package com.javahand.taipeiattractions
 
+import android.content.Context
+import android.content.ContextWrapper
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -11,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.PopupMenu
 import com.javahand.taipeiattractions.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,12 +55,50 @@ class MainActivity : AppCompatActivity() {
         PopupMenu(this, findViewById(R.id.action_lang)).run {
             inflate(R.menu.popup_lang)
             setOnMenuItemClickListener {
+                if (switchLang(it.itemId)) {
+                    recreate()
+                } // if
 
                 true
             } // setOnMenuItemClickListener
             show()
         } // let
     } // fun showPopupLang( MenuItem )
+
+    private fun switchLang(itemId: Int): Boolean {
+        return when (itemId) {
+            R.id.lang_tw -> switchLocale(Locale.TRADITIONAL_CHINESE)
+            R.id.lang_cn -> switchLocale(Locale.SIMPLIFIED_CHINESE)
+            R.id.lang_en -> switchLocale(Locale.ENGLISH)
+            R.id.lang_ja -> switchLocale(Locale.JAPANESE)
+            R.id.lang_ko -> switchLocale(Locale.KOREAN)
+            R.id.lang_es -> switchLocale(Locale("es"))
+            R.id.lang_th -> switchLocale(Locale("th"))
+            R.id.lang_vi -> switchLocale(Locale("vi"))
+            else -> false
+        } // when
+    } // fun switchLang( Int )
+
+    private fun switchLocale(toLocale: Locale): Boolean {
+        val switch = LangPref.getLocale(this) != toLocale
+
+        if (switch) {
+            LangPref.setLocale(toLocale, this)
+        } // if
+
+        return switch
+    } // fun switchLocale(Locale)
+
+    override fun attachBaseContext(newBase: Context?) {
+        val newContext = newBase?.run {
+            resources?.configuration?.let {
+                it.setLocale(LangPref.getLocale(this))
+                ContextWrapper(createConfigurationContext(it))
+            } ?: this
+        } ?: newBase
+
+        super.attachBaseContext(newContext)
+    } // fun attachBaseContext( Context?)
 
     override fun onSupportNavigateUp(): Boolean {
         val navController =
