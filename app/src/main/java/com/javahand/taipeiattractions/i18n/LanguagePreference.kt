@@ -1,11 +1,11 @@
-package com.javahand.taipeiattractions
+package com.javahand.taipeiattractions.i18n
 
 import android.content.Context
 import java.util.Locale
 
-object LangPref {
-    private const val PREF_LANGUAGE_PREFERENCE = "LangPref"
-    private const val KEY_LANGUAGE_TAG = "LangTag"
+object LanguagePreference {
+    private const val PREF_LANGUAGE_PREFERENCE = "LanguagePreference"
+    private const val KEY_LANGUAGE_TAG = "LanguageTag"
 
     fun getLocale(context: Context): Locale {
         val prefLangPref = context.getSharedPreferences(
@@ -25,7 +25,9 @@ object LangPref {
             Context.MODE_PRIVATE
         ).edit()
 
-        editLangPref.putString(KEY_LANGUAGE_TAG, locale.toLanguageTag())
-            .apply()
+        editLangPref.putString(
+            KEY_LANGUAGE_TAG,
+            locale.toLanguageTag()
+        ).apply()
     } // fun setLocale( Locale, Context )
 } // object DefaultLang

@@ -13,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.PopupMenu
 import com.javahand.taipeiattractions.databinding.ActivityMainBinding
+import com.javahand.taipeiattractions.i18n.LanguagePreference
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -80,10 +81,10 @@ class MainActivity : AppCompatActivity() {
     } // fun switchLang( Int )
 
     private fun switchLocale(toLocale: Locale): Boolean {
-        val switch = LangPref.getLocale(this) != toLocale
+        val switch = LanguagePreference.getLocale(this) != toLocale
 
         if (switch) {
-            LangPref.setLocale(toLocale, this)
+            LanguagePreference.setLocale(toLocale, this)
         } // if
 
         return switch
@@ -92,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     override fun attachBaseContext(newBase: Context?) {
         val newContext = newBase?.run {
             resources?.configuration?.let {
-                it.setLocale(LangPref.getLocale(this))
+                it.setLocale(LanguagePreference.getLocale(this))
                 ContextWrapper(createConfigurationContext(it))
             } ?: this
         } ?: newBase
