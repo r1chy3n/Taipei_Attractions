@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/AllAttractionsFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.javahand.taipeiattractions.FirstFragment"
+        android:id="@+id/AllAttractionsFragment"
+        android:name="com.javahand.taipeiattractions.view.AllAttractionsFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_all_attractions">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_AllAttractionsFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
@@ -23,6 +23,6 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/AllAttractionsFragment" />
     </fragment>
 </navigation>
