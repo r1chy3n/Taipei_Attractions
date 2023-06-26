@@ -50,6 +50,8 @@ class AllAttractionsFragment : Fragment() {
             } // lambda
         ) // invoke
 
+        viewModel.invalidatePagingSource()
+
         val attractions = viewModel.attractions
         val allAttractionsAdapter = AllAttractionsAdapter()
 

@@ -20,7 +20,11 @@ class AllAttractionsViewModel(
             enablePlaceholders = false
         ),
         pagingSourceFactory = {
-            attractionRepository.articlePagingSource()
+            attractionRepository.attractionPagingSource()
         } // lambda
     ).flow.cachedIn(viewModelScope)
+
+    fun invalidatePagingSource() {
+        attractionRepository.invalidatePagingSource()
+    } // fun invalidatePagingSource()
 } // class AttractionViewModel

@@ -39,6 +39,6 @@ data class Attraction(
     val service: List<Service>,     // 25
     val friendly: List<Friendly>,   // 26
     val images: List<Image>,        // 27
-    val files: String,              // 28
+    val files: List<Any>,           // 28
     val links: List<Link>           // 29
 )
