@@ -4,19 +4,24 @@ import android.content.Context
 import java.util.Locale
 
 object LanguagePreference {
+    lateinit var langCode: String
+
     private const val PREF_LANGUAGE_PREFERENCE = "LanguagePreference"
     private const val KEY_LANGUAGE_TAG = "LanguageTag"
 
     fun getLocale(context: Context): Locale {
-        val prefLangPref = context.getSharedPreferences(
+        val prefLanguage = context.getSharedPreferences(
             PREF_LANGUAGE_PREFERENCE,
             Context.MODE_PRIVATE
         )
 
-        val langTag = prefLangPref.getString(KEY_LANGUAGE_TAG, null )
-            ?: Locale.getDefault().toLanguageTag()
+        val locale = prefLanguage.getString(KEY_LANGUAGE_TAG, null )?.let {
+            Locale.forLanguageTag(it)
+        } ?: Locale.getDefault()
 
-        return Locale.forLanguageTag(langTag)
+        langCode = locale.toLanguageTag().lowercase()
+
+        return locale
     } // getLocale(Context)
 
     fun setLocale(locale: Locale, context: Context) {
@@ -29,5 +34,7 @@ object LanguagePreference {
             KEY_LANGUAGE_TAG,
             locale.toLanguageTag()
         ).apply()
+
+        langCode = locale.toLanguageTag().lowercase()
     } // fun setLocale( Locale, Context )
 } // object DefaultLang
