@@ -6,6 +6,10 @@ import java.util.Locale
 object LanguagePreference {
     lateinit var langCode: String
 
+    private var _hasBeenChanged = false
+
+    val hasBeenChanged get() = _hasBeenChanged
+
     private const val PREF_LANGUAGE_PREFERENCE = "LanguagePreference"
     private const val KEY_LANGUAGE_TAG = "LanguageTag"
 
@@ -36,5 +40,10 @@ object LanguagePreference {
         ).apply()
 
         langCode = locale.toLanguageTag().lowercase()
+        _hasBeenChanged = true
     } // fun setLocale( Locale, Context )
+
+    fun clearChangedFlag() {
+        _hasBeenChanged = false
+    } // fun clearChangedFlag()
 } // object DefaultLang

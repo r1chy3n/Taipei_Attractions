@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_all_attractions">
 
         <action
-            android:id="@+id/action_AllAttractionsFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_AllAttractionsFragment_to_AttractionFragment"
+            app:destination="@id/AttractionFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.javahand.taipeiattractions.SecondFragment"
+        android:id="@+id/AttractionFragment"
+        android:name="com.javahand.taipeiattractions.view.AttractionFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_attraction">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"

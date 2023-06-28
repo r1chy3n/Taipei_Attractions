@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.PopupMenu
+import androidx.core.view.size
 import com.javahand.taipeiattractions.databinding.ActivityMainBinding
 import com.javahand.taipeiattractions.i18n.LanguagePreference
 import java.util.Locale
@@ -34,11 +35,20 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (binding.toolbar.menu.size > 0) {
+                binding.toolbar.menu.getItem(
+                    0
+                ).isVisible = destination.id == R.id.AllAttractionsFragment
+            } // if
+        } // addOnDestinationChangedListener
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
+
         return true
     }
 

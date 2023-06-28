@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.DiffUtil
 import com.javahand.taipeiattractions.databinding.ViewholderAttractionBinding
 import com.javahand.taipeiattractions.model.Attraction
 
-class AllAttractionsAdapter: PagingDataAdapter<Attraction,
-        AttractionViewHolder>(ATTRACTION_DIFF_CALLBACK) {
+class AllAttractionsAdapter(
+    private val attractionClickListener: (Attraction) -> Unit
+    ): PagingDataAdapter<Attraction, AttractionViewHolder>(
+    ATTRACTION_DIFF_CALLBACK
+) {
 
     companion object {
         private val ATTRACTION_DIFF_CALLBACK = object
@@ -42,6 +45,7 @@ class AllAttractionsAdapter: PagingDataAdapter<Attraction,
             LayoutInflater.from(parent.context),
             parent,
             false
-        ) // invoke
+        ),
+        attractionClickListener
     ) // constructor
 } // class AllAttractionsAdapter
