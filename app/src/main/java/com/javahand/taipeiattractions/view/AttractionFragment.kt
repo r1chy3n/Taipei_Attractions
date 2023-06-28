@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.NavDirections
-import androidx.navigation.fragment.findNavController
-import com.javahand.taipeiattractions.R
+import com.bumptech.glide.Glide
 import com.javahand.taipeiattractions.databinding.FragmentAttractionBinding
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModel
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModelFactory
@@ -48,11 +46,21 @@ class AttractionFragment : Fragment() {
             } // lambda
         ) // invoke
 
-        (activity as AppCompatActivity).supportActionBar?.let {
-            viewModel.attraction.value?.run {
-                it.title = peekContent().name
+        viewModel.attraction.value?.run {
+            peekContent().run {
+                (activity as AppCompatActivity).supportActionBar?.let {
+                    it.title = name
+                } // let
+
+                images.firstOrNull()?.let {
+                    if ( it.src.isNotEmpty()) {
+                        Glide.with(requireContext())
+                            .load(it.src)
+                            .into(binding.imageFirst)
+                    } // if
+                } // let
             } // run
-        } // let
+        } // run
     } // fun onViewCreated( View, Bundle?)
 
     override fun onDestroyView() {
