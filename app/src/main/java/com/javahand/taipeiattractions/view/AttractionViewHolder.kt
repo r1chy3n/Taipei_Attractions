@@ -17,7 +17,7 @@ class AttractionViewHolder(
                     .load(src)
                     .into(binding.imageThumb)
             } // if
-        } // let
+        } ?: Glide.with(binding.root.context).clear(binding.imageThumb)
 
         binding.textName.text = attraction.name
         binding.textIntro.text = attraction.introduction

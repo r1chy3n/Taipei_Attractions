@@ -2,8 +2,11 @@ package com.javahand.taipeiattractions.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import com.bumptech.glide.Glide
+import com.javahand.taipeiattractions.R
 import com.javahand.taipeiattractions.databinding.ViewholderAttractionBinding
 import com.javahand.taipeiattractions.model.Attraction
 
@@ -48,4 +51,13 @@ class AllAttractionsAdapter(
         ),
         attractionClickListener
     ) // constructor
+
+    override fun onViewRecycled(holder: AttractionViewHolder) {
+        with(holder.itemView) {
+            Glide.with(context)
+                .clear(findViewById<ImageView>(R.id.image_thumb))
+        } // lambda
+
+        super.onViewRecycled(holder)
+    } // fun onViewRecycled(AttractionViewHolder)
 } // class AllAttractionsAdapter

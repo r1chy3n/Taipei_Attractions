@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
-import com.bumptech.glide.Glide
+import com.google.android.material.tabs.TabLayoutMediator
 import com.javahand.taipeiattractions.databinding.FragmentAttractionBinding
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModel
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModelFactory
@@ -52,13 +52,19 @@ class AttractionFragment : Fragment() {
                     it.title = name
                 } // let
 
-                images.firstOrNull()?.let {
-                    if ( it.src.isNotEmpty()) {
-                        Glide.with(requireContext())
-                            .load(it.src)
-                            .into(binding.imageFirst)
-                    } // if
-                } // let
+                val imagesAdapter = ImagesAdapter(
+                    this@AttractionFragment,
+                    images.map { it.src }
+                ) // constructor
+                binding.pager2Images.adapter = imagesAdapter
+
+                TabLayoutMediator(
+                    binding.tabImages,
+                    binding.pager2Images
+                ) { _, _ -> }.attach()
+
+                binding.textName.text = name
+                binding.textIntro.text = introduction
             } // run
         } // run
     } // fun onViewCreated( View, Bundle?)

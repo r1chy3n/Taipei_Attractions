@@ -20,7 +20,7 @@
             app:popExitAnim="@android:anim/fade_out"
             />
     </fragment>
-    
+
     <fragment
         android:id="@+id/AttractionFragment"
         android:name="com.javahand.taipeiattractions.view.AttractionFragment"
