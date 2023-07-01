@@ -123,6 +123,13 @@ class AttractionFragment : Fragment() {
                 R.string.caption_opening
             ) // invoke
 
+            // 景點資訊：收費門票
+            setupInfoRow(
+                ticket,
+                binding.panelInfo.rowTickets,
+                R.string.caption_tickets
+            ) // invoke
+
             // 景點資訊：電話
             setupInfoRow(
                 tel,
