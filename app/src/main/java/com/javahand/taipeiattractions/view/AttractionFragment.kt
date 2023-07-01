@@ -151,6 +151,14 @@ class AttractionFragment : Fragment() {
                 R.string.caption_addr
             ) // invoke
 
+            binding.panelInfo.rowAddr.textContent.setOnClickListener {
+                val gmmString = "geo:$northLatitude,$eastLongitude?z=17"
+                val gmmUri = Uri.parse(gmmString)
+                val mapIntent = Intent(Intent.ACTION_VIEW, gmmUri)
+                mapIntent.setPackage("com.google.android.apps.maps")
+                startActivity(mapIntent)
+            } // setOnClickListener
+
             // 標題：相關連結
             binding.subjLinks.setOnClickListener {
                 subjectTextClicked(binding.panelLinks, binding.subjLinks)
