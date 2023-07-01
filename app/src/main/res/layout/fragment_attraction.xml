@@ -73,7 +73,7 @@
             app:layout_constraintBottom_toBottomOf="@id/subj_intro"
             />
 
-        <!-- 區塊：景點介紹內容 -->
+        <!-- 面板：景點介紹內容 -->
         <TextView
             android:id="@+id/text_intro"
             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
             app:layout_constraintBottom_toBottomOf="@id/subj_info"
             />
 
-        <!-- 區塊：景點資訊內容 -->
+        <!-- 面板：景點資訊內容 -->
         <include
             layout="@layout/panel_info"
             android:id="@+id/panel_info"
@@ -117,38 +117,45 @@
             app:layout_constraintTop_toBottomOf="@id/subj_info"
             />
 
-        <!-- 標題：相關連結 -->
-        <TextView
-            android:id="@+id/subj_links"
-            android:layout_width="wrap_content"
+        <!-- 區塊：相關連結 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_links"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/shape_subject_background"
-            android:text="@string/subj_links"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/panel_info"
-            app:drawableStartCompat="@drawable/level_panel_expand"
-            />
-
-        <!-- 分隔線：相關連結 -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
             android:layout_marginHorizontal="8dp"
-            android:background="#808080"
-            app:layout_constraintBottom_toBottomOf="@id/subj_links"
-            />
+            app:layout_constraintTop_toBottomOf="@id/panel_info"
+            >
+            <!-- 標題：相關連結 -->
+            <TextView
+                android:id="@+id/subj_links"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_subject_background"
+                android:text="@string/subj_links"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:drawableStartCompat="@drawable/level_panel_expand"
+                />
 
-        <!-- 區塊：相關連結內容 -->
-        <LinearLayout
-            android:id="@+id/panel_links"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/subj_links"
-            />
+            <!-- 分隔線：相關連結 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#808080"
+                app:layout_constraintBottom_toBottomOf="@id/subj_links"
+                />
+
+            <!-- 面板：相關連結內容 -->
+            <LinearLayout
+                android:id="@+id/panel_links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/subj_links"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

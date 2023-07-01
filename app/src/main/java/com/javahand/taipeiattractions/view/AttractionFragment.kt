@@ -150,11 +150,18 @@ class AttractionFragment : Fragment() {
             } // setOnClickListener
 
             // 區塊：相關連結
-            setupLink(officialSite, R.string.caption_official)
-            setupLink(facebook, R.string.caption_facebook)
-            links.forEach {
-                setupLink(it.src, it.subject)
-            } // forEach
+            if (officialSite.isEmpty()
+                && facebook.isEmpty()
+                && links.isEmpty()
+            ) {
+                binding.blockLinks.visibility = View.GONE
+            } else {
+                setupLink(officialSite, R.string.caption_official)
+                setupLink(facebook, R.string.caption_facebook)
+                links.forEach {
+                    setupLink(it.src, it.subject)
+                } // forEach
+            } // if - else
         } // run
     } // fun onViewCreated( View, Bundle?)
 
