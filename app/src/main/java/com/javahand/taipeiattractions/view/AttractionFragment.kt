@@ -266,8 +266,8 @@ class AttractionFragment : Fragment() {
             infoRowBinding.textContent.text =
                 rowData.joinToString(separator = "、") {
                     when (it) {
-                        is Category -> it.name
-                        is Target -> it.name
+                        is Category -> "#${it.name}"
+                        is Target -> "[${it.name}]"
                         else -> ""
                     } // when
                 } // joinToString
