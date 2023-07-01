@@ -12,7 +12,7 @@
         android:scrollbars="vertical"
         />
     <ProgressBar
-        android:id="@+id/progress_circular"
+        android:id="@+id/progress_all_attractions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"

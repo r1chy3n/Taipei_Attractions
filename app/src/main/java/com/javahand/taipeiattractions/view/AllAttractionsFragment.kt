@@ -73,7 +73,7 @@ class AllAttractionsFragment : Fragment() {
             // 如果將此段 collectLatest 放入下面的 launch 中，會導致無資料載入
             allAttractionsAdapter.loadStateFlow.collectLatest {
                 if (it.refresh is LoadState.NotLoading) {
-                    binding.progressCircular.visibility = View.GONE
+                    binding.progressAllAttractions.visibility = View.GONE
                 } // if
             } // collectLatest
         } // launch
