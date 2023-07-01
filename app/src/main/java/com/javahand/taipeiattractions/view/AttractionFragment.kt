@@ -1,6 +1,8 @@
 package com.javahand.taipeiattractions.view
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
@@ -12,9 +14,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import com.javahand.taipeiattractions.R
 import com.javahand.taipeiattractions.databinding.FragmentAttractionBinding
@@ -154,8 +158,8 @@ class AttractionFragment : Fragment() {
         } // run
     } // fun onViewCreated( View, Bundle?)
 
-    private fun setupLink(link: String, nameOrId: Any) {
-        if (link.isNotEmpty()) {
+    private fun setupLink(linkSrc: String, nameOrId: Any) {
+        if (linkSrc.isNotEmpty()) {
             binding.panelLinks.addView(
                 TextView(context).apply {
                     layoutParams = LinearLayout.LayoutParams(
@@ -182,18 +186,34 @@ class AttractionFragment : Fragment() {
                             Spanned.SPAN_INCLUSIVE_EXCLUSIVE
                         ) // invoke
                     } // also
-                    textSize = 16F
+                    textSize = 15F
                     setCompoundDrawablesRelativeWithIntrinsicBounds(
                         null,
                         null,
                         ResourcesCompat.getDrawable(
                             resources,
-                            R.drawable.ic_action_open_in_new,
+                            if (
+                                nameOrId == R.string.caption_facebook
+                            ) R.drawable.ic_action_open_in_new
+                            else R.drawable.ic_action_home,
                             null
                         ),
                         null
                     ) // invoke
-                    setTextColor(Color.parseColor("#2222EE"))
+                    setOnClickListener {
+                        if (nameOrId is Int
+                            && nameOrId == R.string.caption_facebook) {
+                            val uri = Uri.parse(linkSrc)
+                            startActivity(Intent(Intent.ACTION_VIEW, uri))
+                        } else {
+                            val bundle = bundleOf("linkSrc" to linkSrc)
+                            findNavController().navigate(
+                                R.id.action_AttractionFragment_to_RelatedLinkFragmen,
+                                bundle
+                            ) // invoke
+                        } // if - else
+                    } // setOnClickListener
+                    setTextColor(Color.parseColor("#4444EE"))
                 } // also
             ) // invoke
         } // if

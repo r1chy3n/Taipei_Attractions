@@ -9,8 +9,8 @@
         android:id="@+id/AllAttractionsFragment"
         android:name="com.javahand.taipeiattractions.view.AllAttractionsFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_all_attractions">
-
+        tools:layout="@layout/fragment_all_attractions"
+        >
         <action
             android:id="@+id/action_AllAttractionsFragment_to_AttractionFragment"
             app:destination="@id/AttractionFragment"
@@ -24,7 +24,24 @@
     <fragment
         android:id="@+id/AttractionFragment"
         android:name="com.javahand.taipeiattractions.view.AttractionFragment"
-        android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_attraction"
-        />
+        >
+        <action
+            android:id="@+id/action_AttractionFragment_to_RelatedLinkFragmen"
+            app:destination="@id/WebViewFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/WebViewFragment"
+        android:name="com.javahand.taipeiattractions.view.RelatedLinkFragment"
+        >
+        <argument
+            android:name="linkUrl"
+            app:argType="string"
+            />
+    </fragment>
 </navigation>
