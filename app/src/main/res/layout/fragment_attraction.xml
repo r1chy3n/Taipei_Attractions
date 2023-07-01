@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.AttractionFragment"
@@ -11,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
+        android:layout_marginBottom="48dp"
         >
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/pager2_images"
@@ -36,6 +37,7 @@
             app:layout_constraintBottom_toBottomOf="@id/pager2_images"
             />
 
+        <!-- 景點名稱 -->
         <TextView
             android:id="@+id/text_name"
             android:layout_width="match_parent"
@@ -46,13 +48,107 @@
             android:textSize="18sp"
             />
 
+        <!-- 標題：景點介紹 -->
+        <TextView
+            android:id="@+id/subj_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_subject_background"
+            android:text="@string/subj_intro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:drawableStartCompat="@drawable/level_panel_expand"
+            />
+
+        <!-- 分隔線：景點介紹 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="#808080"
+            app:layout_constraintBottom_toBottomOf="@id/subj_intro"
+            />
+
+        <!-- 區塊：景點介紹內容 -->
         <TextView
             android:id="@+id/text_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:layout_constraintTop_toBottomOf="@id/text_name"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subj_intro"
+            />
+
+        <!-- 標題：景點資訊 -->
+        <TextView
+            android:id="@+id/subj_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_subject_background"
+            android:text="@string/subj_info"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_intro"
+            app:drawableStartCompat="@drawable/level_panel_expand"
+            />
+
+        <!-- 分隔線：景點資訊 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="#808080"
+            app:layout_constraintBottom_toBottomOf="@id/subj_info"
+            />
+
+        <!-- 區塊：景點資訊內容 -->
+        <include
+            layout="@layout/panel_info"
+            android:id="@+id/panel_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/subj_info"
+            />
+
+        <!-- 標題：相關連結 -->
+        <TextView
+            android:id="@+id/subj_links"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_subject_background"
+            android:text="@string/subj_links"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/panel_info"
+            app:drawableStartCompat="@drawable/level_panel_expand"
+            />
+
+        <!-- 分隔線：相關連結 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="#808080"
+            app:layout_constraintBottom_toBottomOf="@id/subj_links"
+            />
+
+        <!-- 區塊：相關連結內容 -->
+        <LinearLayout
+            android:id="@+id/panel_links"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/subj_links"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">台北景点</string>
+
+    <string name="subj_intro">景点介绍</string>
+    <string name="subj_info">景点资讯</string>
+    <string name="subj_links">相关连结</string>
+
+    <string name="caption_themes">主题分类</string>
+    <string name="caption_subject">推荐对象</string>
+    <string name="caption_months">推荐月份</string>
+    <string name="caption_phone">电话</string>
+    <string name="caption_fax">传真</string>
+    <string name="caption_email">邮箱</string>
+    <string name="caption_addr">地址</string>
+
+    <string name="text_all_year">整年</string>
 </resources>

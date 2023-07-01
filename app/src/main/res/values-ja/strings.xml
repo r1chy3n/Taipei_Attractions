@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">台北の観光スポット</string>
+
+    <string name="subj_intro">紹介</string>
+    <string name="subj_info">観光スポット情報</string>
+    <string name="subj_links">関連リンク</string>
+
+    <string name="caption_themes">テーマ</string>
+    <string name="caption_subject">推奨対象</string>
+    <string name="caption_months">お勧めの月</string>
+    <string name="caption_phone">電話</string>
+    <string name="caption_fax">ファクス</string>
+    <string name="caption_email">メール</string>
+    <string name="caption_addr">住所</string>
+
+    <string name="caption_official">公式サイト</string>
+    <string name="caption_facebook">Facebookページ</string>
+
+    <string name="text_all_year">通年</string>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <!-- 項目區塊：主題分類 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_themes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!-- 項目區塊：推薦對象 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_themes"
+        />
+
+    <!-- 項目區塊：推薦月份 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_months"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_subject"
+        />
+
+    <!-- 項目區塊：電話 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_months"
+        />
+
+    <!-- 項目區塊：傳真 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_fax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_phone"
+        />
+
+    <!-- 項目區塊：電子郵件 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_fax"
+        />
+
+    <!-- 項目區塊：地址 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_email"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

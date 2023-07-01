@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Atracciones de Taipéi</string>
+
+    <string name="subj_intro">Introducción</string>
+    <string name="subj_info">Información</string>
+    <string name="subj_links">Enlaces relacionados</string>
+
+    <string name="caption_themes">Temáticas</string>
+    <string name="caption_subject">Tema</string>
+    <string name="caption_months">Meses</string>
+    <string name="caption_phone">Teléfono</string>
+    <string name="caption_fax">FAX</string>
+    <string name="caption_email">E-Mail</string>
+    <string name="caption_addr">Dirección</string>
+
+    <string name="caption_official">Sitio web oficial</string>
+    <string name="caption_facebook">Facebook Página</string>
+
+    <string name="text_all_year">Todo el año</string>
 </resources>

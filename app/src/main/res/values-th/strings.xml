@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">สถานที่ท่องเที่ยวไทเป</string>
+
+    <string name="subj_intro">การแนะนำ</string>
+    <string name="subj_info">ข้อมูลสถานที่ท่องเที่ยว</string>
+    <string name="subj_links">ลิงก์ที่เกี่ยวข้อง</string>
+
+    <string name="caption_themes">หมวดหมู่ตามธีม</string>
+    <string name="caption_subject">เหมาะสำหรับ</string>
+    <string name="caption_months">เดือนที่แนะนำ</string>
+    <string name="caption_phone">โทรศัพท์</string>
+    <string name="caption_fax">โทรสาร</string>
+    <string name="caption_email">อีเมล</string>
+    <string name="caption_addr">ที่ตั้ง</string>
+
+    <string name="caption_official">เว็บไซต์ทางการ</string>
+    <string name="caption_facebook">เพสบุ๊กเพจ</string>
+
+    <string name="text_all_year">ตลอดปี</string>
 </resources>

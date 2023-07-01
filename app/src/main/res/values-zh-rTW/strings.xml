@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">臺北景點</string>
+
+    <string name="subj_intro">景點介紹</string>
+    <string name="subj_info">景點資訊</string>
+    <string name="subj_links">相關連結</string>
+
+    <string name="caption_themes">主題分類</string>
+    <string name="caption_subject">推薦對象</string>
+    <string name="caption_months">推薦月份</string>
+    <string name="caption_phone">電話</string>
+    <string name="caption_fax">傳真</string>
+    <string name="caption_email">電子郵件</string>
+    <string name="caption_addr">地址</string>
+
+    <string name="caption_official">官方網站</string>
+    <string name="caption_facebook">臉書粉絲專頁</string>
+
+    <string name="text_all_year">整年</string>
 </resources>

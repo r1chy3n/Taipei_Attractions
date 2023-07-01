@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">điểm tham quan đài bắc</string>
+
+    <string name="subj_intro">Giới thiệu</string>
+    <string name="subj_info">Thông tin cảnh đẹp</string>
+    <string name="subj_links">Liên kết liên quan</string>
+
+    <string name="caption_themes">Chủ đề thể loại</string>
+    <string name="caption_subject">Phù hợp với</string>
+    <string name="caption_months">Đề nghị tháng</string>
+    <string name="caption_phone">Điện thoại</string>
+    <string name="caption_fax">Fax</string>
+    <string name="caption_email">Email</string>
+    <string name="caption_addr">Địa chỉ</string>
+
+    <string name="caption_official">Trang web chính thức</string>
+    <string name="caption_facebook">Trang dành Facebook</string>
+
+    <string name="text_all_year">Cả năm</string>
 </resources>

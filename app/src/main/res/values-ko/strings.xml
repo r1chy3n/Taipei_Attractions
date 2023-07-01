@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">타이베이 명소</string>
+
+    <string name="subj_intro">소개</string>
+    <string name="subj_info">관광 명소 정보</string>
+    <string name="subj_links">관련 링크</string>
+
+    <string name="caption_themes">테마</string>
+    <string name="caption_subject">추천 대상</string>
+    <string name="caption_months">추천하는 달</string>
+    <string name="caption_phone">전화</string>
+    <string name="caption_fax">팩스</string>
+    <string name="caption_email">E-Mail</string>
+    <string name="caption_addr">주소</string>
+
+    <string name="caption_official">공식 웹 사이트</string>
+    <string name="caption_facebook">페이스 북 페이지</string>
+
+    <string name="text_all_year">1년 내내</string>
 </resources>
