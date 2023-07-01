@@ -20,6 +20,8 @@
     <string name="subj_intro">Introduction</string>
     <string name="subj_info">Information</string>
     <string name="subj_links">Related Links</string>
+    <string name="subj_reminder">Reminders</string>
+    <string name="caption_stay">Best Stay Time</string>
 
     <string name="caption_themes">Themes</string>
     <string name="caption_subject">Subject</string>

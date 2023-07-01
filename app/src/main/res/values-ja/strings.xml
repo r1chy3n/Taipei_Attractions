@@ -5,6 +5,7 @@
     <string name="subj_intro">紹介</string>
     <string name="subj_info">観光スポット情報</string>
     <string name="subj_links">関連リンク</string>
+    <string name="subj_reminder">注意事項</string>
 
     <string name="caption_themes">テーマ</string>
     <string name="caption_subject">推奨対象</string>
@@ -16,6 +17,7 @@
 
     <string name="caption_opening">営業時間</string>
     <string name="caption_tickets">料金/入場券</string>
+    <string name="caption_stay">最適な滞留時間</string>
 
     <string name="caption_official">公式サイト</string>
     <string name="caption_facebook">Facebookページ</string>

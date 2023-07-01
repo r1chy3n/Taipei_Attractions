@@ -5,6 +5,7 @@
     <string name="subj_intro">Introducción</string>
     <string name="subj_info">Información</string>
     <string name="subj_links">Enlaces relacionados</string>
+    <string name="subj_reminder">Recordatorio</string>
 
     <string name="caption_themes">Temáticas</string>
     <string name="caption_subject">Tema</string>
@@ -16,6 +17,7 @@
 
     <string name="caption_opening">Horario de apertura</string>
     <string name="caption_tickets">Cargo / Boleto</string>
+    <string name="caption_stay">mejor tiempo de estancia</string>
 
     <string name="caption_official">Sitio web oficial</string>
     <string name="caption_facebook">Facebook Página</string>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
+
     <!-- 項目列：主題分類 -->
     <include
         layout="@layout/info_row"
@@ -44,6 +45,16 @@
         app:layout_constraintTop_toBottomOf="@id/row_months"
         />
 
+    <!-- 項目列：建議停留時間 -->
+    <include
+        layout="@layout/info_row"
+        android:id="@+id/row_stay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/row_opening"
+        />
+
     <!-- 項目列：收費門票 -->
     <include
         layout="@layout/info_row"
@@ -51,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        app:layout_constraintTop_toBottomOf="@id/row_opening"
+        app:layout_constraintTop_toBottomOf="@id/row_stay"
         />
 
     <!-- 項目列：電話 -->

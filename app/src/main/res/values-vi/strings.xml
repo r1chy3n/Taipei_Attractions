@@ -5,6 +5,7 @@
     <string name="subj_intro">Giới thiệu</string>
     <string name="subj_info">Thông tin cảnh đẹp</string>
     <string name="subj_links">Liên kết liên quan</string>
+    <string name="subj_reminder">Nhắc nhở</string>
 
     <string name="caption_themes">Chủ đề thể loại</string>
     <string name="caption_subject">Phù hợp với</string>
@@ -16,6 +17,7 @@
 
     <string name="caption_opening">Thời gian mở cửa</string>
     <string name="caption_tickets">Phí / Vé</string>
+    <string name="caption_stay">Thời gian dừng tối ưu</string>
 
     <string name="caption_official">Trang web chính thức</string>
     <string name="caption_facebook">Trang dành Facebook</string>

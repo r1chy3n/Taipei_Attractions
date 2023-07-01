@@ -5,6 +5,7 @@
     <string name="subj_intro">การแนะนำ</string>
     <string name="subj_info">ข้อมูลสถานที่ท่องเที่ยว</string>
     <string name="subj_links">ลิงก์ที่เกี่ยวข้อง</string>
+    <string name="subj_reminder">เตือนความจำ</string>
 
     <string name="caption_themes">หมวดหมู่ตามธีม</string>
     <string name="caption_subject">เหมาะสำหรับ</string>
@@ -16,6 +17,7 @@
 
     <string name="caption_opening">เวลาเปิดทำการ</string>
     <string name="caption_tickets">ค่าธรรมเนียม/ตั๋ว</string>
+    <string name="caption_stay">เวลาพักที่ดีที่สุด</string>
 
     <string name="caption_official">เว็บไซต์ทางการ</string>
     <string name="caption_facebook">เพสบุ๊กเพจ</string>

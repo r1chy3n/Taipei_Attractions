@@ -123,6 +123,13 @@ class AttractionFragment : Fragment() {
                 R.string.caption_opening
             ) // invoke
 
+            // 景點資訊：建議停留時間
+            setupInfoRow(
+                stayTime,
+                binding.panelInfo.rowStay,
+                R.string.caption_stay
+            ) // invoke
+
             // 景點資訊：收費門票
             setupInfoRow(
                 ticket,
@@ -165,6 +172,22 @@ class AttractionFragment : Fragment() {
                 mapIntent.setPackage("com.google.android.apps.maps")
                 startActivity(mapIntent)
             } // setOnClickListener
+
+            // 區塊：小叮嚀
+            if (remind.isEmpty()) {
+                binding.blockReminder.visibility = View.GONE
+            } else {
+                // 標題：小叮嚀
+                binding.subjReminder.setOnClickListener {
+                    subjectTextClicked(
+                        binding.textReminder,
+                        binding.subjReminder
+                    ) // invoke
+                } // setOnClickListener
+
+                // 小叮嚀內容
+                binding.textReminder.text = remind
+            } // if - else
 
             // 標題：相關連結
             binding.subjLinks.setOnClickListener {
