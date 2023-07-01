@@ -14,5 +14,10 @@
     <string name="caption_email">邮箱</string>
     <string name="caption_addr">地址</string>
 
+    <string name="caption_opening">开放时间</string>
+
+    <string name="caption_official">官方网站</string>
+    <string name="caption_facebook">脸书专页</string>
+
     <string name="text_all_year">整年</string>
 </resources>

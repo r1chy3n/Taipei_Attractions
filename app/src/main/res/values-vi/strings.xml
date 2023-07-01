@@ -14,6 +14,8 @@
     <string name="caption_email">Email</string>
     <string name="caption_addr">Địa chỉ</string>
 
+    <string name="caption_opening">Thời gian mở cửa</string>
+
     <string name="caption_official">Trang web chính thức</string>
     <string name="caption_facebook">Trang dành Facebook</string>
 

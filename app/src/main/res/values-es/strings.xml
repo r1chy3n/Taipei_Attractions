@@ -14,6 +14,8 @@
     <string name="caption_email">E-Mail</string>
     <string name="caption_addr">Dirección</string>
 
+    <string name="caption_opening">Horario de apertura</string>
+
     <string name="caption_official">Sitio web oficial</string>
     <string name="caption_facebook">Facebook Página</string>
 

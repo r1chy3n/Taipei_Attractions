@@ -116,6 +116,13 @@ class AttractionFragment : Fragment() {
                 R.string.caption_months
             ) // invoke
 
+            // 景點資訊：開放時間
+            setupInfoRow(
+                openTime,
+                binding.panelInfo.rowOpening,
+                R.string.caption_opening
+            ) // invoke
+
             // 景點資訊：電話
             setupInfoRow(
                 tel,
