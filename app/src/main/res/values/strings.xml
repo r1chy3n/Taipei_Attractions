@@ -33,9 +33,12 @@
 
     <string name="caption_opening">Opening Hours</string>
     <string name="caption_tickets">Charge / Ticket</string>
+    <string name="caption_service">Service Facilities</string>
+    <string name="caption_friendly">Friendly Id.</string>
 
     <string name="caption_official">Official Website</string>
     <string name="caption_facebook">Facebook Page</string>
+    <string name="caption_taipei">Taipei Travel</string>
 
     <string name="text_all_year">All year</string>
 

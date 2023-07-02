@@ -18,9 +18,12 @@
     <string name="caption_opening">Thời gian mở cửa</string>
     <string name="caption_tickets">Phí / Vé</string>
     <string name="caption_stay">Thời gian dừng tối ưu</string>
+    <string name="caption_service">Cơ sở dịch vụ</string>
+    <string name="caption_friendly">nhận thân thiện</string>
 
     <string name="caption_official">Trang web chính thức</string>
     <string name="caption_facebook">Trang dành Facebook</string>
+    <string name="caption_taipei">Du lịch Đài Bắc</string>
 
     <string name="text_all_year">Cả năm</string>
 </resources>

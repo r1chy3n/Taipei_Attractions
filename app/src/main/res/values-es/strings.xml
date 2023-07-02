@@ -18,9 +18,12 @@
     <string name="caption_opening">Horario de apertura</string>
     <string name="caption_tickets">Cargo / Boleto</string>
     <string name="caption_stay">mejor tiempo de estancia</string>
+    <string name="caption_service">Instalaciones servicio</string>
+    <string name="caption_friendly">Id. Amistosa</string>
 
     <string name="caption_official">Sitio web oficial</string>
     <string name="caption_facebook">Facebook Página</string>
+    <string name="caption_taipei">Viaje a Taipéi</string>
 
     <string name="text_all_year">Todo el año</string>
 </resources>

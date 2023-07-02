@@ -18,9 +18,12 @@
     <string name="caption_opening">เวลาเปิดทำการ</string>
     <string name="caption_tickets">ค่าธรรมเนียม/ตั๋ว</string>
     <string name="caption_stay">เวลาพักที่ดีที่สุด</string>
+    <string name="caption_service">สถานบริการ</string>
+    <string name="caption_friendly">ใบรับรองที่เป็นมิตร</string>
 
     <string name="caption_official">เว็บไซต์ทางการ</string>
     <string name="caption_facebook">เพสบุ๊กเพจ</string>
+    <string name="caption_taipei">เที่ยวไทเป</string>
 
     <string name="text_all_year">ตลอดปี</string>
 </resources>

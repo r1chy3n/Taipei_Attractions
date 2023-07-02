@@ -24,6 +24,8 @@ import com.javahand.taipeiattractions.R
 import com.javahand.taipeiattractions.databinding.FragmentAttractionBinding
 import com.javahand.taipeiattractions.databinding.InfoRowBinding
 import com.javahand.taipeiattractions.model.Category
+import com.javahand.taipeiattractions.model.Friendly
+import com.javahand.taipeiattractions.model.Service
 import com.javahand.taipeiattractions.model.Target
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModel
 import com.javahand.taipeiattractions.viewmodel.AllAttractionsViewModelFactory
@@ -100,6 +102,20 @@ class AttractionFragment : Fragment() {
                 category,
                 binding.panelInfo.rowThemes,
                 R.string.caption_themes
+            ) // invoke
+
+            // 景點資訊：友善認證
+            setupInfoRow(
+                friendly,
+                binding.panelInfo.rowFriendly,
+                R.string.caption_friendly
+            ) // invoke
+
+            // 景點資訊：服務設施
+            setupInfoRow(
+                service,
+                binding.panelInfo.rowService,
+                R.string.caption_service
             ) // invoke
 
             // 景點資訊：推薦對象
@@ -198,6 +214,7 @@ class AttractionFragment : Fragment() {
             if (officialSite.isEmpty()
                 && facebook.isEmpty()
                 && links.isEmpty()
+                && url.isEmpty()
             ) {
                 binding.blockLinks.visibility = View.GONE
             } else {
@@ -206,6 +223,7 @@ class AttractionFragment : Fragment() {
                 links.forEach {
                     setupLink(it.src, it.subject)
                 } // forEach
+                setupLink(url, R.string.caption_taipei)
             } // if - else
         } // run
     } // fun onViewCreated( View, Bundle?)
@@ -311,8 +329,10 @@ class AttractionFragment : Fragment() {
             infoRowBinding.textContent.text =
                 rowData.joinToString(separator = "、") {
                     when (it) {
-                        is Category -> "#${it.name}"
-                        is Target -> "[${it.name}]"
+                        is Category -> "⁂ ${it.name}"
+                        is Target -> "\uD83E\uDDCD${it.name}"
+                        is Friendly -> "♡ ${it.name}"
+                        is Service -> "☑ ${it.name}"
                         else -> ""
                     } // when
                 } // joinToString

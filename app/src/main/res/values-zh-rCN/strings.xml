@@ -18,9 +18,12 @@
     <string name="caption_opening">开放时间</string>
     <string name="caption_tickets">收费 / 门票</string>
     <string name="caption_stay">建議停留時間</string>
+    <string name="caption_service">服务设施</string>
+    <string name="caption_friendly">友善认证</string>
 
     <string name="caption_official">官方网站</string>
     <string name="caption_facebook">脸书专页</string>
+    <string name="caption_taipei">台北旅游网</string>
 
     <string name="text_all_year">整年</string>
 </resources>

@@ -18,9 +18,12 @@
     <string name="caption_opening">영업 시간</string>
     <string name="caption_tickets">수수료 / 티켓</string>
     <string name="caption_stay">최고의 체류 시간</string>
+    <string name="caption_service">서비스 시설</string>
+    <string name="caption_friendly">친절한 인증</string>
 
     <string name="caption_official">공식 웹 사이트</string>
     <string name="caption_facebook">페이스 북 페이지</string>
+    <string name="caption_taipei">타이베이 여행</string>
 
     <string name="text_all_year">1년 내내</string>
 </resources>

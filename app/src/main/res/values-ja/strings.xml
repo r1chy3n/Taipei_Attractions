@@ -18,9 +18,12 @@
     <string name="caption_opening">営業時間</string>
     <string name="caption_tickets">料金/入場券</string>
     <string name="caption_stay">最適な滞留時間</string>
+    <string name="caption_service">サービス施設</string>
+    <string name="caption_friendly">フレンドリーな認証</string>
 
     <string name="caption_official">公式サイト</string>
     <string name="caption_facebook">Facebookページ</string>
+    <string name="caption_taipei">台北旅行</string>
 
     <string name="text_all_year">通年</string>
 </resources>
